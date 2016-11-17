@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>My Ally</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        {% load static %}
+        <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <script>
+            $(document).ready(function(e) {
+                var $input = $('#refresh');
+                $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+            });
+        </script>
+    </head>
+    <body class="landing">
+    <input type="hidden" id="refresh" value="no">
+			<!-- Header -->
+			<header id="header">
+				<ul>
+                    <li id="escape"><a href="escape.html" class="button small">Escape</a></li>
+					<li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+					<li>
+						<nav id="nav">
+							<ul>
+								<li><a href="testimonial.html">Testimonials</a></li>
+								<li>
+									<a href="fjc.html">FJC Virtual Tour</a>
+									<ul>
+										<li><a href="tour-manhattan.html">Manhattan</a></li>
+										<li><a href="#">Queens</a></li>
+										<li><a href="#">Bronx</a></li>
+										<li><a href="#">Staten Island</a></li>
+										<li><a herf="#">Brooklyn</a></li>
+									</ul>
+								</li>
+								<li><a href="phone-safe.html">Tech Safety Tips</a>
+								<li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+								<li><a href="FAQs.html">FAQs</a></li>
+								<li><a href="log-in.html">My FJC Portal</a></li>
+							</ul>
+						</nav>
+					</li>
+				</ul>
+			</header>
+
+			<!-- Banner -->
+
+			<section id="banner">
+				<div class="content" style="text-align:left">
+					<header>
+						<p>
+							<span class="image"><img src="images/testimonials/0.jpg" alt="" /></span>
+						<h2>Testimonials</h2>
+						Survivors share their experiences on how they overcame their fears and the impact their choice to go to an FJC had on their life.
+						</p>
+					</header>
+				</div>
+			</section>
+
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+
+					<span class="image fit main"><img src="images/testimonials/1.jpg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="4u 12u$(medium)">
+									<header>
+										<h2>Mary’s Story</h2>
+									</header>
+								</div>
+								<div class="4u 12u$(medium)">
+									<p>I thought having a child would change our relationship and make everything better. I was wrong. The abuse continued and now, I was afraid not only for my own life, but my child’s life as well. </p>
+									<ul class="actions">
+										<li><a href="testimonial1.html" class="button">Learn More about Mary’s Story</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- Two -->
+			<section id="two" class="spotlight style1 bottom">
+
+				<span class="image fit main"><img src="images/testimonials/2.jpg" alt="" /></span>
+				<div class="content">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u$(medium)">
+								<header>
+									<h2>Juan’s Story</h2>
+								</header>
+							</div>
+							<div class="4u 12u$(medium)">
+								<p>I left my abusive relationship three years ago and have not looked back. Today, I am finally in a healthy relationship and my days are full of laughter and love instead of hate and fear. </p>
+								<ul class="actions">
+									<li><a href="testimonial2.html" class="button">Learn More about Juan’s Story</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Three -->
+			<section id="three" class="spotlight style1 bottom">
+
+				<span class="image fit main"><img src="images/testimonials/3.jpg" alt="" /></span>
+				<div class="content">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u$(medium)">
+								<header>
+									<h2>Jayme’s Story</h2>
+								</header>
+							</div>
+							<div class="4u 12u$(medium)">
+								<p>The physical abuse was one thing. The pain would subside, the bruises would fade. The emotional abuse was the one that was lasting. He would constantly belittle me, make me feel worthless, and made sure I believed that I was nothing without him. </p>
+								<ul class="actions">
+									<li><a href="testimonial3.html" class="button">Learn more about Jayme’s Story</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</footer>
+
+		</div>
+
+            <!-- Scripts -->
+            <script src="{% static "assets/js/jquery.min.js" %}"></script>
+            <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+            <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+            <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+            <script src="{% static "assets/js/skel.min.js" %}"></script>
+            <script src="{% static "assets/js/util.js" %}"></script>
+            <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
+            <script src="{% static "assets/js/main.js" %}"></script>
+
+            </body>
+            </html>
