@@ -14,23 +14,18 @@
     <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <script>
-        $(document).ready(function(e) {
-            var $input = $('#refresh');
-            $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
-        });
-    </script>
 </head>
 <body class="landing">
 <input type="hidden" id="refresh" value="no">
 <!-- Header -->
 <header id="header">
     <ul>
-        <li id="escape"><a href="escape.html" class="button small">Escape</a></li>
+        <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
         <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
         <li>
             <nav id="nav">
                 <ul>
+                    <li><a herf="">Services Offered</a></li>
                     <li><a href="testimonial.html">Testimonials</a></li>
                     <li>
                         <a href="fjc.html">FJC Virtual Tour</a>
@@ -59,14 +54,13 @@
         <header>
             <h2>Welcome to My FJC</h2>
         </header>
+        <ul class="actions fit">
+            <li><a href="calendar.html" class="button fit">Appointment Calendar</a></li>
+            <br>
+            <li><a href="incident-log.html" class="button fit">Incident Log</a></li>
+        </ul>
     </div>
 </section>
-
-<ul class="actions fit">
-    <li><a href="calendar.html" class="button fit">Appointment Calendar</a></li>
-    <li><a href="incident-log.html" class="button fit">Incident Log</a></li>
-</ul>
-
 
 <!-- Footer -->
 <footer id="footer">
@@ -94,6 +88,18 @@
 <script src="{% static "assets/js/util.js" %}"></script>
 <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
 <script src="{% static "assets/js/main.js" %}"></script>
-
+<script>
+$(document).ready(function(e) {
+    var $input = $('#refresh');
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+});
+</script>
+<script>
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
+</script>
 </body>
 </html>

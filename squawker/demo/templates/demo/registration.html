@@ -28,11 +28,12 @@
     <!-- Header -->
     <header id="header">
         <ul>
-            <li id="escape"><a href="escape.html" class="button small">Escape</a></li>
+            <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
             <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
             <li>
                 <nav id="nav">
                     <ul>
+                        <li><a herf="">Services Offered</a></li>
                         <li><a href="testimonial.html">Testimonials</a></li>
                         <li>
                             <a href="fjc.html">FJC Virtual Tour</a>
@@ -80,14 +81,6 @@
                             <h4>Password:</h4>
                             <input type="text" name="password" id="password" value="" placeholder="Password" />
                         </div>
-                        <div class="12u">
-                            <h4>Term of Use</h4>
-                            <ul>
-                                <li>Dolor pulvinar etiam magna etiam.</li>
-                                <li>Sagittis adipiscing lorem eleifend.</li>
-                                <li>Felis enim feugiat dolore viverra.</li>
-                            </ul>
-                        </div>
                         <div class="4u 12u$(medium)">
                             <input type="radio" id="term-agree" name="term-check">
                             <label for="term-agree">I agree with the term.</label>
@@ -125,6 +118,18 @@
   <script src="{% static "assets/js/util.js"%}"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
   <script src="{%static "assets/js/main.js"%}"></script>
-
+  <script>
+  $(document).ready(function(e) {
+    var $input = $('#refresh');
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+  });
+  </script>
+  <script>
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
+  </script>
 </body>
 </html>

@@ -14,43 +14,38 @@
     <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <script>
-        $(document).ready(function(e) {
-            var $input = $('#refresh');
-            $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
-        });
-    </script>
 </head>
 <body class="landing">
 <input type="hidden" id="refresh" value="no">
 
 <!-- Header -->
 <header id="header">
-	<ul>
-        <li id="escape"><a href="escape.html" class="button small">Escape</a></li>
-		<li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
-		<li>
-			<nav id="nav">
-				<ul>
-					<li><a href="testimonial.html">Testimonials</a></li>
-					<li>
-						<a href="fjc.html">FJC Virtual Tour</a>
-						<ul>
-							<li><a href="tour-manhattan.html">Manhattan</a></li>
-							<li><a href="#">Queens</a></li>
-							<li><a href="#">Bronx</a></li>
-							<li><a href="#">Staten Island</a></li>
-							<li><a herf="#">Brooklyn</a></li>
-						</ul>
-					</li>
-					<li><a href="phone-safe.html">Tech Safety Tips</a>
-					<li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
-					<li><a href="FAQs.html">FAQs</a></li>
-					<li><a href="log-in.html">My FJC Portal</a></li>
-				</ul>
-			</nav>
-		</li>
-	</ul>
+    <ul>
+        <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
+        <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+        <li>
+            <nav id="nav">
+                <ul>
+                    <li><a herf="">Services Offered</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li>
+                        <a href="fjc.html">FJC Virtual Tour</a>
+                        <ul>
+                            <li><a href="tour-manhattan.html">Manhattan</a></li>
+                            <li><a href="#">Queens</a></li>
+                            <li><a href="#">Bronx</a></li>
+                            <li><a href="#">Staten Island</a></li>
+                            <li><a herf="#">Brooklyn</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="phone-safe.html">Tech Safety Tips</a>
+                    <li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                    <li><a href="log-in.html">My FJC Portal</a></li>
+                </ul>
+            </nav>
+        </li>
+    </ul>
 </header>
 
 <!-- Banner -->
@@ -66,8 +61,11 @@
 				(212) 602-2800
 			</p>
 			<p>
-				Hours of Operation: Monday through Friday 9:00 a.m. - 5:00 p.m.
-			</p>
+				Hours of Operation:
+            </p>
+            <p>
+                Monday through Friday 9:00 a.m. - 5:00 p.m.
+            </p>
 		</header>
 	</div>
 </section>
@@ -76,7 +74,7 @@
 <!-- One -->
 <section id="one" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/1.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/1.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -93,7 +91,7 @@
 <!-- Two -->
 <section id="two" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/2.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/2.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -110,7 +108,7 @@
 <!-- Three -->
 <section id="three" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/3.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/3.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -127,7 +125,7 @@
 <!-- Four -->
 <section id="four" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/4.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/4.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -144,7 +142,7 @@
 <!-- Five -->
 <section id="five" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/5.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/5.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -160,7 +158,7 @@
 <!-- Six -->
 <section id="six" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/6.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/6.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -176,7 +174,7 @@
 <!-- Seven -->
 <section id="seven" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/7.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/7.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -192,7 +190,7 @@
 <!-- Eight -->
 <section id="eight" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/8.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/8.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -209,7 +207,7 @@
 <!-- Nine -->
 <section id="nine" class="spotlight style1 bottom">
 
-	<span class="image fit main"><img src="images/fjc/manhattan/9.jpg" alt="" /></span>
+	<span class="image fit main"><img src="{% static "images/fjc/manhattan/9.jpg" %}" alt="" /></span>
 	<div class="content">
 		<div class="container">
 			<div class="row">
@@ -252,6 +250,18 @@
 <script src="{% static "assets/js/util.js" %}"></script>
 <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
 <script src="{% static "assets/js/main.js" %}"></script>
-
+<script>
+$(document).ready(function(e) {
+    var $input = $('#refresh');
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+});
+</script>
+<script>
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
+</script>
 </body>
 </html>

@@ -20,33 +20,34 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<header id="header">
-				<ul>
-                    <li id="escape"><a href="escape.html" class="button small">Escape</a></li>
-					<li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
-					<li>
-						<nav id="nav">
-							<ul>
-								<li><a href="testimonial.html">Testimonials</a></li>
-								<li>
-									<a href="fjc.html">FJC Virtual Tour</a>
-									<ul>
-										<li><a href="tour-manhattan.html">Manhattan</a></li>
-										<li><a href="#">Queens</a></li>
-										<li><a href="#">Bronx</a></li>
-										<li><a href="#">Staten Island</a></li>
-										<li><a herf="#">Brooklyn</a></li>
-									</ul>
-								</li>
-								<li><a href="phone-safe.html">Tech safety tips</a>
-								<li><a href="prepare-visit.html">Prepare for your FJC Visit</a></li>
-								<li><a href="FAQs.html">FAQs</a></li>
-								<li><a href="log-in.html">My Portal</a></li>
-							</ul>
-						</nav>
-					</li>
-				</ul>
-			</header>
+            <header id="header">
+                <ul>
+                    <li id="escape"><a href="escape.html" class="button small fit">Exit</a></li>
+                    <li><h1 id="logo"><a href="index.html">My Ally</a></h1></li>
+                    <li>
+                        <nav id="nav">
+                            <ul>
+                                <li><a herf="">Services Offered</a></li>
+                                <li><a href="testimonial.html">Testimonials</a></li>
+                                <li>
+                                    <a href="fjc.html">FJC Virtual Tour</a>
+                                    <ul>
+                                        <li><a href="tour-manhattan.html">Manhattan</a></li>
+                                        <li><a href="#">Queens</a></li>
+                                        <li><a href="#">Bronx</a></li>
+                                        <li><a href="#">Staten Island</a></li>
+                                        <li><a herf="#">Brooklyn</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="phone-safe.html">Tech Safety Tips</a>
+                                <li><a href="prepare-visit.html">Prepare For Your FJC Visit</a></li>
+                                <li><a href="FAQs.html">FAQs</a></li>
+                                <li><a href="log-in.html">My FJC Portal</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                </ul>
+            </header>
 
 			<script type="text/javascript">
 			alert("Click the red button to escape at any time. To learn more about staying safe on your phone, check out Tech Tips.");
@@ -67,15 +68,10 @@
 
 			<!-- Content -->
 
- 			<div class="row uniform">
-
-
 				<section id="banner">
 					<div class="content">
 						<span class="image"><img src="images/charity.png" alt="" /></span>
 						<header>
-                            <input type="button" value="Reload page"
-                                   onclick="reloadPage()" />
 							<h2>Client-Centered Approach</h2>
 							<p>It’s Your Choice!<br />
 							As a client, you get to choose what resources you believe<br />
@@ -109,7 +105,6 @@
 
 					</div>
 				</section>
-			</div>
 
 			<!-- Footer -->
 				<footer id="footer">
@@ -137,17 +132,18 @@
         <script src="{% static "assets/js/util.js" %}"></script>
         <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
         <script src="{% static "assets/js/main.js" %}"></script>
-        <script type="text/javascript">
-            $(document).ready(function(e) {
-                var $input = $('#refresh');
-                $input.val() == 'yes' ? window.location.reload(true) : $input.val('yes');
-            });
-        </script>
-        <script type="text/javascript">
-            function reloadPage()
-            {
-                window.location.reload(true)
+    <script>
+    $(document).ready(function(e) {
+        var $input = $('#refresh');
+        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+    </script>
+    <script>
+        $(window).bind("pageshow", function(event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
             }
-        </script>
+        });
+    </script>
         </body>
         </html>
