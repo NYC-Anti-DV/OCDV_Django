@@ -6,29 +6,41 @@
 -->
 <html>
 <head>
-    <title>My Ally</title>
+    <title>Incident log</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     {% load static %}
-<link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
-
+    <link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <link rel="stylesheet" type="text/css" href="css/mobipick.css" />
-    <script type="text/javascript" src="external/xdate.js"></script>
-    <script type="text/javascript" src="external/xdate.i18n.js"></script>
-    <script type="text/javascript" src="js/mobipick.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("p").click(function(){
-                $(this).hide();
-            });
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/mobipick.css" %}" />
+    <script type="text/javascript" src="{% static "assets/external/xdate.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/external/xdate.i18n.js" %}"></script>
+    <script type="text/javascript" src="{% static "assets/js/mobipick.js" %}"></script>
+    <script src="{% static "assets/js/jquery.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+    <script src="{% static "assets/js/skel.min.js"%}"></script>
+    <script src="{% static "assets/js/util.js"%}"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{%static "assets/js/main.js"%}"></script>
+    <script>
+    $(document).ready(function(e) {
+        var $input = $('#refresh');
+        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+    </script>
+    <script>
+        $(window).bind("pageshow", function(event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
         });
     </script>
 </head>
-<body class="landing">
-<input type="hidden" id="refresh" value="no">
+<body>
 <div id="page-wrapper">
 
     <!-- Header -->

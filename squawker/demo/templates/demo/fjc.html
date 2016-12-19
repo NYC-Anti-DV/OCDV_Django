@@ -24,7 +24,7 @@
         <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
         <script src="{% static "assets/js/main.js" %}"></script>
         <script>
-            $(document).ready(function(e) {
+            $(document).onload(function(e) {
                 var $input = $('#refresh');
                 $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
             });

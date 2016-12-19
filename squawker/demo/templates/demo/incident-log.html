@@ -18,6 +18,27 @@
     <script type="text/javascript" src="{% static "assets/external/xdate.js" %}"></script>
     <script type="text/javascript" src="{% static "assets/external/xdate.i18n.js" %}"></script>
     <script type="text/javascript" src="{% static "assets/js/mobipick.js" %}"></script>
+    <script src="{% static "assets/js/jquery.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
+    <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+    <script src="{% static "assets/js/skel.min.js"%}"></script>
+    <script src="{% static "assets/js/util.js"%}"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{%static "assets/js/main.js"%}"></script>
+    <script>
+    $(document).ready(function(e) {
+        var $input = $('#refresh');
+        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+    </script>
+    <script>
+        $(window).bind("pageshow", function(event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
+        });
+    </script>
 </head>
 <body>
 <div id="page-wrapper">
@@ -191,30 +212,7 @@
     </footer>
 
 </div>
+<!-- Scripts -->
 
-
-                            <!-- Scripts -->
-                            {% load static %}
-             <script src="{% static "assets/js/jquery.min.js" %}"></script>
-    <script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
-    <script src="{% static "assets/js/jquery.dropotron.min.js" %}"></script>
-    <script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
-    <script src="{% static "assets/js/skel.min.js"%}"></script>
-    <script src="{% static "assets/js/util.js"%}"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="{%static "assets/js/main.js"%}"></script>
-    <script>
-    $(document).ready(function(e) {
-        var $input = $('#refresh');
-        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
-    });
-    </script>
-    <script>
-        $(window).bind("pageshow", function(event) {
-            if (event.originalEvent.persisted) {
-                window.location.reload()
-            }
-        });
-    </script>
 </body>
 </html>
